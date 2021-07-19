@@ -1,0 +1,43 @@
+{%extends "base.html"%}
+
+{%block content%}
+<style>
+    .jumbotron1{
+    color: #FFFFFF;
+    background-color: black;
+    }
+
+  body {
+  background-image: url('https://images.unsplash.com/photo-1494488180300-4c634d1b2124?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity=0.2;
+
+}
+
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+	<center>
+    <div class="jumbotron1">
+<h1 class='display-1'>AI-Based Image </h1>
+<h1 class='display-1'>Captioning</h1>
+    </div>
+<br>
+<br>
+
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <input type="file" name='file1'>
+<input type="submit" name="btn" value='Predict Caption' class='btn btn-warning'>
+</form>
+
+</center>
+ </div>
+</div>
+
+
+
+{%endblock%}

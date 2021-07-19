@@ -1,0 +1,60 @@
+{%extends "base.html"%}
+    
+{%block content%}
+<style>
+    .jumbotron{
+    color: #FFFFFF;
+    background-color: #ECF0F1;
+    }
+
+        .jumbotron1{
+    color: #FFFFFF;
+    background-color: black;
+    }
+
+  body {
+  background-image: url('https://images.unsplash.com/photo-1457974947974-1d290928d5c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity=0.2;
+
+}
+.text-black{
+color: black;
+}
+
+</style>
+
+
+
+<div class="container">
+	<div class="jumbotron">
+<center>
+	<div class="jumbotron1">
+	<h1 class='display-1'>Predicted Caption </h1>
+	</div>
+	<br>
+	<br>
+	
+<img src="{{url_for('static', filename='file.jpg')}}" alt="image" height=300px>
+
+<br>
+<br>
+
+<h2 class='text-black'>
+	{{data}}
+</h2>
+
+</center>
+		<form action="{{url_for('index')}}"  >
+    	<input type="submit" name="btn" value='Home' class='btn btn-warning' style="float: right;">
+		</form>
+
+</div>
+
+
+	</div>
+
+{%endblock%}
