@@ -2,12 +2,12 @@ from flask import Flask, render_template, request
 from keras.models import load_model
 import numpy as np
 #from keras.applications import ResNet50
-from keras.optimizers import Adam
+#from keras.optimizers import Adam
 from keras.layers import Dense, Flatten, Input, Convolution2D, Dropout, LSTM, TimeDistributed, Embedding, Bidirectional, \
     Activation, RepeatVector, Concatenate
 from keras.models import Sequential, Model
-from keras.utils import np_utils
-from keras.preprocessing import image, sequence
+#from keras.utils import np_utils
+#from keras.preprocessing import image, sequence
 import cv2
 from keras.preprocessing.sequence import pad_sequences
 from tqdm import tqdm
